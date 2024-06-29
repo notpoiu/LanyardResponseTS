@@ -41,45 +41,9 @@ export interface LanyardData {
         public_flags: number
     }
 
-    activities: [
-        {
-            id: string
-            name: string
-            type: number
-            flags?: number
-            session_id?: string
-            details?: string
-            state: string
+    activities: LanyardActivityData[]
 
-            timestamps?: {
-                start: number
-                end?: number
-            }
-            
-            assets?: {
-                large_image?: string
-                large_text?: string
-                small_image?: string
-                small_text?: string
-            }
-
-            emoji?: {
-                id?: string
-                name: string
-                animated?: boolean
-            }
-
-            sync_id?: string
-            created_at: number
-
-            party?: {
-                id?: string
-                size?: [number, number]
-            }
-        }
-    ]
-
-    discord_status: "online" | "offline" | "idle" | "dnd",
+    discord_status: "online" | "offline" | "idle" | "dnd"
 
     active_on_discord_mobile: boolean
     active_on_discord_desktop: boolean
@@ -97,4 +61,40 @@ export interface LanyardResponse {
     }
 
     success: boolean
+}
+
+export interface LanyardActivityData {
+    id: string
+    name: string
+    type: number
+    flags?: number
+    session_id?: string
+    details?: string
+    state: string
+
+    timestamps?: {
+        start: number
+        end?: number
+    }
+    
+    assets?: {
+        large_image?: string
+        large_text?: string
+        small_image?: string
+        small_text?: string
+    }
+
+    emoji?: {
+        id?: string
+        name: string
+        animated?: boolean
+    }
+
+    sync_id?: string
+    created_at: number
+
+    party?: {
+        id?: string
+        size?: [number, number]
+    }
 }
