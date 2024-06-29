@@ -79,7 +79,7 @@ export interface LanyardData {
         }
     ]
 
-    discord_status: "online" | "offline" | "idle" | "dnd" | "invisible",
+    discord_status: "online" | "offline" | "idle" | "dnd",
 
     active_on_discord_mobile: boolean
     active_on_discord_desktop: boolean
