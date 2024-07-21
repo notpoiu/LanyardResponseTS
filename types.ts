@@ -1,5 +1,5 @@
 export interface LanyardData {
-    kv: { string: any }
+    kv: { [key: string]: any }
 
     spotify: {
         track_id: string
